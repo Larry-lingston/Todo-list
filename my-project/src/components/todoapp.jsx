@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaTrash } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa";
-import './todapp.css'
+import { FaCheck } from "react-icons/fa6";
 
 const TodoApp = () => {
   const [todos, setTodos] = useState([]);
@@ -56,21 +56,22 @@ const TodoApp = () => {
                       {todo.text}
                     </span>
                     <label className="relative cursor-pointer">
+                      <span className="w-5 h-5 rounded-full border border-gray-300 flex items-center justify-center transition-all duration-200 ease-in-out">  
+                       {todo.completed && <FaCheck className="absolute text-white" />}
+                      <span
+                          className={
+                            todo.completed
+                              ? "bg-blue-500 rounded-full w-5 h-5"
+                              : "bg-transparent rounded-full w-3 h-3"
+                          }
+                        ></span>
+                      </span>
                       <input
                         type="checkbox"
                         checked={todo.completed}
                         onChange={() => toggleTodo(index)}
                         className="hidden"
                       />
-                      <span className="w-5 h-5 rounded-full border-2 border-gray-300 flex items-center justify-center transition-all duration-200 ease-in-out">
-                        <span
-                          className={
-                            todo.completed
-                              ? "bg-blue-500 rounded-full w-3 h-3"
-                              : "bg-transparent rounded-full w-3 h-3"
-                          }
-                        ></span>
-                      </span>
                     </label>
                     <button
                       className="bg-red-500 text-white p-2 ml-2 rounded-full"
@@ -83,10 +84,10 @@ const TodoApp = () => {
               </ul>
             </div>
             <button
-              className="bg-blue-500 text-white p-3 h-10 w-10 rounded-full m-auto my-3 max-sm:bottom-0 max-sm:left-1/2 max-sm:transform max-sm:-translate-x-1/2 max-sm:-translate-y-1/2 max-sm:fixed"
+              className="bg-blue-500 text-white p-4 h-15 w-15 rounded-full m-auto my-3 max-sm:bottom-0 max-sm:left-1/2 max-sm:transform max-sm:-translate-x-1/2 max-sm:-translate-y-1/2 max-sm:fixed"
               onClick={addTodo}
             >
-              <FaPlus />
+              <FaPlus className="text-4xl"/>
             </button>
           </div>
         </main>
