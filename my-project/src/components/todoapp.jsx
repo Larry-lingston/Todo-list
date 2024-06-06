@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaTrash } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa";
+import './todapp.css'
 
 const TodoApp = () => {
   const [todos, setTodos] = useState([]);
@@ -54,12 +55,23 @@ const TodoApp = () => {
                     >
                       {todo.text}
                     </span>
-                    <input
-                      type="checkbox"
-                      checked={todo.completed}
-                      onChange={() => toggleTodo(index)}
-                      className="ml-2"
-                    />
+                    <label className="relative cursor-pointer">
+                      <input
+                        type="checkbox"
+                        checked={todo.completed}
+                        onChange={() => toggleTodo(index)}
+                        className="hidden"
+                      />
+                      <span className="w-5 h-5 rounded-full border-2 border-gray-300 flex items-center justify-center transition-all duration-200 ease-in-out">
+                        <span
+                          className={
+                            todo.completed
+                              ? "bg-blue-500 rounded-full w-3 h-3"
+                              : "bg-transparent rounded-full w-3 h-3"
+                          }
+                        ></span>
+                      </span>
+                    </label>
                     <button
                       className="bg-red-500 text-white p-2 ml-2 rounded-full"
                       onClick={() => deleteTodo(index)}
