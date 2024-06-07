@@ -34,7 +34,7 @@ import AddModal from "./modal";
   return (
     <>
       <div className="bg-slate-800 max-sm:py-0 min-h-screen flex items-center justify-center py-4">
-        <div className="bg-white max-sm:max-h-lvh min-h-[90dvh] sm:max-h-dvh max-sm:relative w-dvw max-w-lg mx-auto rounded shadow-lg">
+        <div className="bg-white max-sm:max-h-lvh min-h-[90dvh] sm:max-h-dvh max-sm:h-dvh max-sm:relative w-dvw max-w-lg mx-auto rounded shadow-lg">
           <header className="text-center py-5 border-b sticky top-2">
             <h1 className="text-2xl font-bold">ALL TASKS</h1>
           </header>
