@@ -15,7 +15,7 @@ const modal = ({ visible, onClose, addTodo, setNewTodo}) => {
       onClick={handleOnClose}
       id="container"
     >
-      <div className="bg-white text-black w-2/6 h-2/6 p-2 rounded-xl max-sm:w-4/6">
+      <div className="bg-white text-black w-2/6 h-2/6 p-2 rounded-xl max-sm:w-80">
         <div className="flex justify-end w-full">
           <button onClick={onClose}>
             <IoCloseCircleOutline className="text-3xl text-slate-800 cursor-pointer mx-2" />
@@ -29,7 +29,7 @@ const modal = ({ visible, onClose, addTodo, setNewTodo}) => {
             onChange={(e)=>setNewTodo(e.target.value)}
             placeholder="what is the task"
           />
-          <button className="border bg-blue-800 p-2 w-2/6 rounded-3xl mx-auto my-3 font-bold text-white flex justify-center max-sm:w" onClick={(e)=>{
+          <button className="border bg-blue-800 p-2 w-2/6 rounded-3xl mx-auto my-3 font-bold text-white flex justify-center max-sm:w-48 max-sm:py-3 max-sm:my-5" onClick={(e)=>{
             e.preventDefault()
             addTodo()
           }}>
