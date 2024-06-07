@@ -29,7 +29,7 @@ const modal = ({ visible, onClose, addTodo, setNewTodo}) => {
             onChange={(e)=>setNewTodo(e.target.value)}
             placeholder="what is the task"
           />
-          <button className="border bg-blue-800 p-2 w-2/6 rounded-3xl mx-auto my-3 font-bold text-white flex justify-center max-sm:w-48 max-sm:py-3 max-sm:my-5" onClick={(e)=>{
+          <button className="border bg-blue-800 p-2 w-2/6 rounded-3xl mx-auto my-3 font-bold text-white flex justify-center max-sm:w-56 max-sm:py-3 max-sm:my-5" onClick={(e)=>{
             e.preventDefault()
             addTodo()
           }}>
