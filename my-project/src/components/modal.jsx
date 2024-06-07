@@ -15,7 +15,7 @@ const modal = ({ visible, onClose, addTodo, setNewTodo}) => {
       onClick={handleOnClose}
       id="container"
     >
-      <div className="bg-white text-black w-2/6 h-2/6 p-2 rounded-xl">
+      <div className="bg-white text-black w-2/6 h-2/6 p-2 rounded-xl max-sm:w-4/6">
         <div className="flex justify-end w-full">
           <button onClick={onClose}>
             <IoCloseCircleOutline className="text-3xl text-slate-800 cursor-pointer mx-2" />
